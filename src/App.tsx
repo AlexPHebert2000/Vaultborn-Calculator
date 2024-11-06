@@ -119,8 +119,10 @@ function App() {
             </Grid> : <></>
           }
         </Grid>
-        
       </Paper>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <p>Developed by <a href='https://www.linkedin.com/in/alex-hebert-dev/'>Alex Hebert</a>. View the repo <a href='https://github.com/AlexPHebert2000/Vaultborn-Calculator'>here</a>.</p>
+      </div>
     </>
   )
 }
