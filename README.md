@@ -1,50 +1,13 @@
-# React + TypeScript + Vite
+# Vaultborn Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## A calculator for Magic the Gathering to determine the effects of multiple copies of cards like [Vaultborn Tyrant](https://scryfall.com/card/big/20/vaultborn-tyrant) or [Terror of the Peaks](https://scryfall.com/card/otj/149/terror-of-the-peaks).
 
-Currently, two official plugins are available:
+# Visit the site [here!](https://main.dlwlh2umo5lt0.amplifyapp.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Why make this?
 
-## Expanding the ESLint configuration
+I made a [commander deck](https://www.moxfield.com/decks/-5jV8M1sHEOgUoEStqnLRw) with [Ghired, Mirror of the Wilds](https://scryfall.com/card/otj/205/ghired-mirror-of-the-wilds) at the helm that looks to create tons of copies of creatures. Multiple times lots of copies of a creature that cares about other creatures entering would be made and we would spend 5+ minutes trying to calculate the effects, then the player would make another copy and chaos would again ensue. 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+That is why I decided to make the [**Vaultborn Calculator**](https://main.dlwlh2umo5lt0.amplifyapp.com/) named after the biggest offender, Vaultborn Tyrant. Rather than limit the calcuator to only vaultborn tyrant, you can use it to calculate a multitude of effects and remain relevant as more and more powerful ["creaturefall"](https://tagger.scryfall.com/tags/card/creaturefall) effects are made.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+ 
