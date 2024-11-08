@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import InputSection from './inputSection';
 
-import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
 import Divider from '@mui/material/Divider';
@@ -19,23 +18,24 @@ function App() {
   const [instances, setInstances] = useState(0);
   const [countSelf, setCountSelf] = useState(true);
 
-  const handleSubmit = () => {
+  useEffect(() => {
     setInstances( 
       countSelf ? 
         (current + created) * created :
         created * (current + created - 1)
     );
-  }
+    console.log('reloaded')
+  })
 
   const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCountSelf(e.target.checked);
   }
 
   return (
-    <>
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', padding:30}}>
       <h1>Vaultborn Calculator</h1>
       <h3>Quickly calculate the effects of copying cards like <a href="https://scryfall.com/card/big/20/vaultborn-tyrant">Vaultborn Tyrant</a> or <a href="https://scryfall.com/card/otj/149/terror-of-the-peaks">Terror of the peaks</a></h3>
-      <Paper sx={{padding: 2, width: "80vw"}}>
+      <Paper sx={{padding: 2}}>
         <Grid container spacing={1}>
           <Grid size={12}>
             <h2>Battlefield</h2>
@@ -83,9 +83,6 @@ function App() {
               value={damagePer}
               setter={setDamagePer}
             />
-          <Grid size={12} sx={{textAlign: 'end', marginRight: "3vw", marginY:"1vh"}}>
-            <Button onClick={handleSubmit}>Submit</Button>
-          </Grid>
           <Grid size={12}>
             <Divider variant='middle'/>
           </Grid>
@@ -123,7 +120,7 @@ function App() {
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <p>Developed by <a href='https://www.linkedin.com/in/alex-hebert-dev/'>Alex Hebert</a>. View the repo <a href='https://github.com/AlexPHebert2000/Vaultborn-Calculator'>here</a>.</p>
       </div>
-    </>
+    </div>
   )
 }
 
